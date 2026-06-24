@@ -201,5 +201,23 @@ document.getElementById("clearBtn").addEventListener("click", () => {
 });
 
 document.getElementById("downloadBtn").addEventListener("click", downloadResults);
+function setupDropdown(buttonId, menuId) {
+  const button = document.getElementById(buttonId);
+  const menu = document.getElementById(menuId);
 
+  button.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+}
+
+setupDropdown("demographicBtn", "demographicMenu");
+setupDropdown("criteriaBtn", "criteriaMenu");
+
+document.addEventListener("click", function(event) {
+  if (!event.target.closest(".multi-select")) {
+    document.querySelectorAll(".dropdown-menu").forEach(menu => {
+      menu.classList.remove("show");
+    });
+  }
+});
 loadCSV();
