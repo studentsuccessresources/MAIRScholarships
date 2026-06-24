@@ -22,12 +22,53 @@ header p {
 }
 
 .filters {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   gap: 16px;
-  padding: 20px;
+  flex-wrap: wrap;
+  align-items: end;
+  padding: 28px;
   background: white;
   border-bottom: 1px solid #ddd;
+}
+
+.multi-select {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: white;
+  color: #222;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 12px 16px;
+  min-width: 210px;
+  text-align: left;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  min-width: 240px;
+  max-height: 280px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu label {
+  display: block;
+  margin: 8px 0;
+  font-size: 14px;
 }
 
 #searchInput {
