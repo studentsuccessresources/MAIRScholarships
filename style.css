@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+  color: #222;
+}
+
+header {
+  background: #a52237;
+  color: white;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+
+header p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+#searchInput {
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+.checkbox-section {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.checkbox-section h3 {
+  margin: 0 0 10px;
+  color: #a52237;
+}
+
+.checkbox-section label {
+  display: inline-block;
+  margin: 6px 14px 6px 0;
+  font-size: 14px;
+}
+
+.checkbox-section input {
+  margin-right: 6px;
+}
+
+.date-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.date-group label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+button {
+  cursor: pointer;
+  background: #a52237;
+  color: white;
+  border: none;
+  max-width: 220px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#resultCount {
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+#scholarshipList {
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #a52237;
+}
+
+.meta {
+  margin: 7px 0;
+}
+
+.tags {
+  font-size: 14px;
+  color: #555;
+}
+
+.apply-btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: #a52237;
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.apply-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+  .checkbox-section label {
+    display: block;
+  }
+
+  button {
+    max-width: 100%;
+  }
+}
