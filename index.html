@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarship Dashboard</title>
+  <link rel="stylesheet" href="style.css?v=2" />
+</head>
+<body>
+  <header>
+    <h1>Scholarship Dashboard</h1>
+    <p>Search and filter scholarship opportunities by criteria, demographic, and deadline.</p>
+  </header>
+
+  <section class="filters">
+    <input id="searchInput" type="text" placeholder="Search scholarship, criteria, demographic..." />
+
+    <div class="checkbox-section">
+      <h3>Demographics</h3>
+      <label><input type="checkbox" class="demographic-checkbox" value="African American"> African American</label>
+      <label><input type="checkbox" class="demographic-checkbox" value="Asian"> Asian</label>
+      <label><input type="checkbox" class="demographic-checkbox" value="BIPOC"> BIPOC</label>
+      <label><input type="checkbox" class="demographic-checkbox" value="First Generation"> First Generation</label>
+      <label><input type="checkbox" class="demographic-checkbox" value="Latinx"> Latinx</label>
+      <label><input type="checkbox" class="demographic-checkbox" value="LGBTQ"> LGBTQ</label>
+      <label><input type="checkbox" class="demographic-checkbox" value="Native American"> Native American</label>
+      <label><input type="checkbox" class="demographic-checkbox" value="Veteran"> Veteran</label>
+      <label><input type="checkbox" class="demographic-checkbox" value="Women"> Women</label>
+      <label><input type="checkbox" class="demographic-checkbox" value="All students"> All students</label>
+    </div>
+
+    <div class="checkbox-section">
+      <h3>Criteria</h3>
+      <label><input type="checkbox" class="criteria-checkbox" value="Ambition"> Ambition</label>
+      <label><input type="checkbox" class="criteria-checkbox" value="Need"> Need</label>
+      <label><input type="checkbox" class="criteria-checkbox" value="Undergraduate"> Undergraduate</label>
+      <label><input type="checkbox" class="criteria-checkbox" value="Graduate"> Graduate</label>
+      <label><input type="checkbox" class="criteria-checkbox" value="STEM"> STEM</label>
+      <label><input type="checkbox" class="criteria-checkbox" value="Nursing"> Nursing</label>
+      <label><input type="checkbox" class="criteria-checkbox" value="U.S. Citizen"> U.S. Citizen</label>
+      <label><input type="checkbox" class="criteria-checkbox" value="DACA"> DACA</label>
+      <label><input type="checkbox" class="criteria-checkbox" value="International"> International</label>
+      <label><input type="checkbox" class="criteria-checkbox" value="GPA"> GPA</label>
+    </div>
+
+    <div class="date-group">
+      <label for="fromDate">Deadline From</label>
+      <input id="fromDate" type="date" />
+    </div>
+
+    <div class="date-group">
+      <label for="toDate">Deadline To</label>
+      <input id="toDate" type="date" />
+    </div>
+
+    <button id="clearBtn">Clear Filters</button>
+    <button id="downloadBtn">Download Results</button>
+  </section>
+
+  <p id="resultCount"></p>
+
+  <main id="scholarshipList"></main>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="script.js?v=2"></script>
+</body>
+</html>
