@@ -15,34 +15,37 @@
   <section class="filters">
     <input id="searchInput" type="text" placeholder="Search scholarship, criteria, demographic..." />
 
-    <div class="checkbox-section">
-      <h3>Demographics</h3>
-      <label><input type="checkbox" class="demographic-checkbox" value="African American"> African American</label>
-      <label><input type="checkbox" class="demographic-checkbox" value="Asian"> Asian</label>
-      <label><input type="checkbox" class="demographic-checkbox" value="BIPOC"> BIPOC</label>
-      <label><input type="checkbox" class="demographic-checkbox" value="First Generation"> First Generation</label>
-      <label><input type="checkbox" class="demographic-checkbox" value="Latinx"> Latinx</label>
-      <label><input type="checkbox" class="demographic-checkbox" value="LGBTQ"> LGBTQ</label>
-      <label><input type="checkbox" class="demographic-checkbox" value="Native American"> Native American</label>
-      <label><input type="checkbox" class="demographic-checkbox" value="Veteran"> Veteran</label>
-      <label><input type="checkbox" class="demographic-checkbox" value="Women"> Women</label>
-      <label><input type="checkbox" class="demographic-checkbox" value="All students"> All students</label>
-    </div>
+ <div class="multi-select">
+  <button type="button" class="dropdown-btn" id="demographicBtn">All Demographics</button>
+  <div class="dropdown-menu" id="demographicMenu">
+    <label><input type="checkbox" class="demographic-checkbox" value="African American"> African American</label>
+    <label><input type="checkbox" class="demographic-checkbox" value="Asian"> Asian</label>
+    <label><input type="checkbox" class="demographic-checkbox" value="BIPOC"> BIPOC</label>
+    <label><input type="checkbox" class="demographic-checkbox" value="First Generation"> First Generation</label>
+    <label><input type="checkbox" class="demographic-checkbox" value="Latinx"> Latinx</label>
+    <label><input type="checkbox" class="demographic-checkbox" value="LGBTQ"> LGBTQ</label>
+    <label><input type="checkbox" class="demographic-checkbox" value="Native American"> Native American</label>
+    <label><input type="checkbox" class="demographic-checkbox" value="Veteran"> Veteran</label>
+    <label><input type="checkbox" class="demographic-checkbox" value="Women"> Women</label>
+    <label><input type="checkbox" class="demographic-checkbox" value="All students"> All students</label>
+  </div>
+</div>
 
-    <div class="checkbox-section">
-      <h3>Criteria</h3>
-      <label><input type="checkbox" class="criteria-checkbox" value="Ambition"> Ambition</label>
-      <label><input type="checkbox" class="criteria-checkbox" value="Need"> Need</label>
-      <label><input type="checkbox" class="criteria-checkbox" value="Undergraduate"> Undergraduate</label>
-      <label><input type="checkbox" class="criteria-checkbox" value="Graduate"> Graduate</label>
-      <label><input type="checkbox" class="criteria-checkbox" value="STEM"> STEM</label>
-      <label><input type="checkbox" class="criteria-checkbox" value="Nursing"> Nursing</label>
-      <label><input type="checkbox" class="criteria-checkbox" value="U.S. Citizen"> U.S. Citizen</label>
-      <label><input type="checkbox" class="criteria-checkbox" value="DACA"> DACA</label>
-      <label><input type="checkbox" class="criteria-checkbox" value="International"> International</label>
-      <label><input type="checkbox" class="criteria-checkbox" value="GPA"> GPA</label>
-    </div>
-
+<div class="multi-select">
+  <button type="button" class="dropdown-btn" id="criteriaBtn">All Criteria</button>
+  <div class="dropdown-menu" id="criteriaMenu">
+    <label><input type="checkbox" class="criteria-checkbox" value="Ambition"> Ambition</label>
+    <label><input type="checkbox" class="criteria-checkbox" value="Need"> Need</label>
+    <label><input type="checkbox" class="criteria-checkbox" value="Undergraduate"> Undergraduate</label>
+    <label><input type="checkbox" class="criteria-checkbox" value="Graduate"> Graduate</label>
+    <label><input type="checkbox" class="criteria-checkbox" value="STEM"> STEM</label>
+    <label><input type="checkbox" class="criteria-checkbox" value="Nursing"> Nursing</label>
+    <label><input type="checkbox" class="criteria-checkbox" value="U.S. Citizen"> U.S. Citizen</label>
+    <label><input type="checkbox" class="criteria-checkbox" value="DACA"> DACA</label>
+    <label><input type="checkbox" class="criteria-checkbox" value="International"> International</label>
+    <label><input type="checkbox" class="criteria-checkbox" value="GPA"> GPA</label>
+  </div>
+</div>
     <div class="date-group">
       <label for="fromDate">Deadline From</label>
       <input id="fromDate" type="date" />
