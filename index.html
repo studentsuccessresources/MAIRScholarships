@@ -2,69 +2,537 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MAIR Scholarship Resources</title>
-  <link rel="stylesheet" href="style.css?v=2" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Search and filter scholarship opportunities by eligibility criteria, demographic, deadline, and award amount."
+  />
+
+  <title>MAIR Scholarship Dashboard</title>
+
+  <link rel="stylesheet" href="style.css?v=1" />
 </head>
+
 <body>
-  <header>
-    <h1>MAIR Scholarship Resources</h1>
-    <p>Search and filter scholarship opportunities by criteria, demographic, and deadline.</p>
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">Student Success Resource</p>
+
+      <h1>MAIR Scholarship Dashboard</h1>
+
+      <p class="header-description">
+        Explore scholarship opportunities based on your academic goals,
+        background, eligibility, and financial needs.
+      </p>
+    </div>
   </header>
 
-  <section class="filters">
-    <input id="searchInput" type="text" placeholder="Search scholarship, criteria, demographic..." />
+  <main>
+    <section class="filter-panel" aria-label="Scholarship filters">
 
- <div class="multi-select">
-  <button type="button" class="dropdown-btn" id="demographicBtn">All Demographics</button>
-  <div class="dropdown-menu" id="demographicMenu">
-    <label><input type="checkbox" class="demographic-checkbox" value="African American"> African American</label>
-    <label><input type="checkbox" class="demographic-checkbox" value="Asian"> Asian</label>
-    <label><input type="checkbox" class="demographic-checkbox" value="BIPOC"> BIPOC</label>
-    <label><input type="checkbox" class="demographic-checkbox" value="First Generation"> First Generation</label>
-    <label><input type="checkbox" class="demographic-checkbox" value="Latinx"> Latinx</label>
-    <label><input type="checkbox" class="demographic-checkbox" value="LGBTQ"> LGBTQ</label>
-    <label><input type="checkbox" class="demographic-checkbox" value="Native American"> Native American</label>
-    <label><input type="checkbox" class="demographic-checkbox" value="Veteran"> Veteran</label>
-    <label><input type="checkbox" class="demographic-checkbox" value="Women"> Women</label>
-    <label><input type="checkbox" class="demographic-checkbox" value="All students"> All students</label>
-  </div>
-</div>
+      <div class="main-filter-row">
 
-<div class="multi-select">
-  <button type="button" class="dropdown-btn" id="criteriaBtn">All Criteria</button>
-  <div class="dropdown-menu" id="criteriaMenu">
-    <label><input type="checkbox" class="criteria-checkbox" value="Ambition"> Ambition</label>
-    <label><input type="checkbox" class="criteria-checkbox" value="Need"> Need</label>
-    <label><input type="checkbox" class="criteria-checkbox" value="Undergraduate"> Undergraduate</label>
-    <label><input type="checkbox" class="criteria-checkbox" value="Graduate"> Graduate</label>
-    <label><input type="checkbox" class="criteria-checkbox" value="STEM"> STEM</label>
-    <label><input type="checkbox" class="criteria-checkbox" value="Nursing"> Nursing</label>
-    <label><input type="checkbox" class="criteria-checkbox" value="U.S. Citizen"> U.S. Citizen</label>
-    <label><input type="checkbox" class="criteria-checkbox" value="DACA"> DACA</label>
-    <label><input type="checkbox" class="criteria-checkbox" value="International"> International</label>
-    <label><input type="checkbox" class="criteria-checkbox" value="GPA"> GPA</label>
-  </div>
-</div>
-    <div class="date-group">
-      <label for="fromDate">Deadline From</label>
-      <input id="fromDate" type="date" />
+        <div class="search-wrapper">
+          <label class="sr-only" for="searchInput">
+            Search scholarships
+          </label>
+
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search scholarship, criteria, demographic..."
+            autocomplete="off"
+          />
+        </div>
+
+        <!-- Demographic dropdown -->
+        <div class="multi-select">
+          <button
+            type="button"
+            class="dropdown-btn"
+            id="demographicBtn"
+            aria-expanded="false"
+            aria-controls="demographicMenu"
+          >
+            <span id="demographicBtnText">All Demographics</span>
+            <span class="dropdown-arrow">▾</span>
+          </button>
+
+          <div class="dropdown-menu" id="demographicMenu">
+            <div class="dropdown-heading">Student Demographics</div>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="All students"
+              />
+              All Students
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="African American"
+              />
+              African American
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Asian"
+              />
+              Asian
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="BIPOC"
+              />
+              BIPOC
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Black"
+              />
+              Black Students
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="First Generation"
+              />
+              First Generation
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Hispanic"
+              />
+              Hispanic
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Immigrant"
+              />
+              Immigrant Students
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="International"
+              />
+              International Students
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Latinx"
+              />
+              Latinx
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="LGBTQ"
+              />
+              LGBTQIA+
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Native American"
+              />
+              Native American
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="People with Disabilities"
+              />
+              Students with Disabilities
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Single Parent"
+              />
+              Single Parents
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Students of Color"
+              />
+              Students of Color
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Undocumented"
+              />
+              Undocumented Students
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Veteran"
+              />
+              Veterans and Military Families
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="demographic-checkbox"
+                value="Women"
+              />
+              Women
+            </label>
+          </div>
+        </div>
+
+        <!-- Criteria dropdown -->
+        <div class="multi-select">
+          <button
+            type="button"
+            class="dropdown-btn"
+            id="criteriaBtn"
+            aria-expanded="false"
+            aria-controls="criteriaMenu"
+          >
+            <span id="criteriaBtnText">All Criteria</span>
+            <span class="dropdown-arrow">▾</span>
+          </button>
+
+          <div class="dropdown-menu" id="criteriaMenu">
+            <div class="dropdown-heading">Eligibility Criteria</div>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="Ambition"
+              />
+              Ambition
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="Community Service"
+              />
+              Community Service
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="DACA"
+              />
+              DACA Eligible
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="Financial Need"
+              />
+              Financial Need
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="Full time"
+              />
+              Full-Time Student
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="GPA"
+              />
+              GPA Requirement
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="Graduate"
+              />
+              Graduate Student
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="Leadership"
+              />
+              Leadership
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="MN Resident"
+              />
+              Minnesota Resident
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="Need"
+              />
+              Need-Based
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="Nursing"
+              />
+              Nursing
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="STEM"
+              />
+              STEM
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="Undergraduate"
+              />
+              Undergraduate Student
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                class="criteria-checkbox"
+                value="U.S. Citizen"
+              />
+              U.S. Citizen
+            </label>
+          </div>
+        </div>
+
+        <!-- Date range -->
+        <div class="date-group">
+          <label for="fromDate">Deadline From</label>
+          <input id="fromDate" type="date" />
+        </div>
+
+        <div class="date-group">
+          <label for="toDate">Deadline To</label>
+          <input id="toDate" type="date" />
+        </div>
+
+        <div class="button-group">
+          <button
+            id="clearBtn"
+            type="button"
+            class="secondary-btn"
+          >
+            Clear
+          </button>
+
+          <button
+            id="downloadBtn"
+            type="button"
+            class="primary-btn"
+          >
+            Download CSV
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick filters -->
+      <div class="quick-filter-area">
+        <span class="quick-filter-label">Quick filters:</span>
+
+        <button
+          type="button"
+          class="quick-filter"
+          data-type="demographic"
+          data-filter="All students"
+        >
+          All Students
+        </button>
+
+        <button
+          type="button"
+          class="quick-filter"
+          data-type="demographic"
+          data-filter="First Generation"
+        >
+          First Generation
+        </button>
+
+        <button
+          type="button"
+          class="quick-filter"
+          data-type="demographic"
+          data-filter="International"
+        >
+          International
+        </button>
+
+        <button
+          type="button"
+          class="quick-filter"
+          data-type="demographic"
+          data-filter="Undocumented"
+        >
+          Undocumented
+        </button>
+
+        <button
+          type="button"
+          class="quick-filter"
+          data-type="demographic"
+          data-filter="Students of Color"
+        >
+          Students of Color
+        </button>
+
+        <button
+          type="button"
+          class="quick-filter"
+          data-type="demographic"
+          data-filter="Women"
+        >
+          Women
+        </button>
+
+        <button
+          type="button"
+          class="quick-filter"
+          data-type="demographic"
+          data-filter="LGBTQ"
+        >
+          LGBTQIA+
+        </button>
+
+        <button
+          type="button"
+          class="quick-filter"
+          data-type="criteria"
+          data-filter="STEM"
+        >
+          STEM
+        </button>
+
+        <button
+          type="button"
+          class="quick-filter"
+          data-type="criteria"
+          data-filter="Financial Need"
+        >
+          Financial Need
+        </button>
+      </div>
+    </section>
+
+    <section class="results-header">
+      <div>
+        <p id="resultCount" aria-live="polite">
+          Loading scholarships...
+        </p>
+
+        <p class="results-note">
+          Select filters to narrow the scholarship list.
+        </p>
+      </div>
+
+      <label class="sort-control">
+        Sort:
+        <select id="sortSelect">
+          <option value="name">Scholarship Name</option>
+          <option value="deadline">Nearest Deadline</option>
+          <option value="amount">Highest Award Amount</option>
+        </select>
+      </label>
+    </section>
+
+    <section
+      id="scholarshipList"
+      class="scholarship-grid"
+      aria-label="MAIR scholarships"
+    ></section>
+
+    <div id="emptyState" class="empty-state" hidden>
+      <h2>No scholarships found</h2>
+      <p>Try changing or clearing one or more filters.</p>
     </div>
+  </main>
 
-    <div class="date-group">
-      <label for="toDate">Deadline To</label>
-      <input id="toDate" type="date" />
-    </div>
-
-    <button id="clearBtn">Clear Filters</button>
-    <button id="downloadBtn">Download CSV</button>
-  </section>
-
-  <p id="resultCount"></p>
-
-  <main id="scholarshipList"></main>
+  <footer>
+    <p>
+      Scholarship information may change. Always visit the official
+      scholarship website to confirm current deadlines, eligibility,
+      award amounts, and application requirements.
+    </p>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=1"></script>
 </body>
 </html>
